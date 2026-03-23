@@ -37,8 +37,6 @@ SELECT * FROM clienti
 WHERE nome = 'Mario';
 
 ### es 2 | Extract the first and last names of customers born in 1982
-
-Report the list of invoices (number, amount, VAT, and date) plus the name of the supplier
 SELECT nome, cognome FROM clienti 
 WHERE anno_di_nascita = 1982;
 
@@ -58,8 +56,7 @@ JOIN clienti
 ON fatture.id_cliente = clienti.numero_cliente
 WHERE fatture.importo < 1000;
 
-
-### es 6 | Considering only invoices with 20% VAT, extract the number of invoices (invoice count) for each year (To extract the year from a date, you can use EXTRACT(YEAR FROM data))
+### es 6 | Report the list of invoices (number, amount, VAT, and date) plus the name of the supplier
 SELECT 
     fatture.numero_fattura, 
     fatture.importo, 
